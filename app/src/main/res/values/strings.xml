@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Midlands</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="invalid_name">Please enter your name</string>
+    <string name="invalid_email">Enter a valid email address</string>
+    <string name="invalid_phone_no">Enter a valid phone number</string>
+    <string name="invalid_password">Enter a password</string>
+    <string name="confirm_password">Please confirm password</string>
+    <string name="empty_email">Enter Email Address</string>
+    <string name="empty_message">Please type message.</string>
+    <string name="empty_recipient">Select Recipient.</string>
+    <string name="forgot_password">Do not worry! Please provide your email to recover password.</string>
+    <string name="steps">
+        <![CDATA[
+        <ul>
+        <li> Enter the <b>PAY BILL NO.</b> <b><font color= #0000><u> 123456</u> </b> and <b>ACCOUNT NO.</b> as <b><u>your phone number.</u></b></li>
+        <li> After completing payment, Enter the <b>M-PESA TRANSACTION CODE </b> below and <b>CHECKOUT</b>. </li>
+        </ul>
+        ]]>
+    </string>
+    <string name="about_us_long">
+        <![CDATA[
+        <p>
+            <b>Midlands Limited</b> is an agro-processing company, with the objective of adding value to temperate zone agricultural produce in Kenya.
+        </p>
+        <p>
+            Situated on a 25 acre piece of land in South Kinangop, Nyadarua which is in the South rift valley, the crop range of the business included
+            <ul>
+            <li> Potatoes</li>
+            <li> Carrots</li>
+            <li> Cabbage</li>
+            <li> Sukuma wiki</li>
+            <li> Peas</li>
+            </ul>
+        </p>
+        <p>
+            Although the company was incorporated in <b>1987</b>, requisite operation licenses were given only in 2004, when the company was re-launched.
+        </p>
+        <p>
+            In 2013 Pearl Capital Partners (Pearl) invested KSh 200 million (USD 2,300,000) in Midlands Limited through the African Agricultural Capital Fund (AACF).
+        </p>
+        <ul>
+        ]]>
+    </string>
+    <string name="about_us">We are committed to maximizing the value of our products to our esteemed customers through pump supplies and services, and sales of all water fittings and accessories. </string>
+    <string name="company">MIDLANDS LTD</string>
+    <string name="don_t_have_an_account_sign_up">Don\'t have an account? SIGN UP</string>
+    <string name="no_items">Sorry! No items found</string>
+    <string name="make_payment">Make Payment</string>
+</resources>

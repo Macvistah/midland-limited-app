@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/login_bk_color"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    tools:context=".Activities.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/midland_logo" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/company_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:gravity="center"
+                        android:text="@string/company"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:gravity="center"
+                        android:text="Sign in now to start your session"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="14sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputEmail"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:textColorHint="@color/whiteTextColor"
+                        app:boxBackgroundMode="outline">
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/loginEditText"
+                            android:hint="@string/login_email_hint"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:textColor="@color/whiteTextColor" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputPassword"
+                        style="@style/parent"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:textColorHint="@color/whiteTextColor"
+                        app:boxBackgroundMode="outline">
+
+                        <EditText
+                            android:id="@+id/password"
+                            style="@style/loginEditText"
+                            android:hint="@string/login_password_hint"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:textColor="@color/whiteTextColor"
+                            android:textColorHint="@color/colorPrimary" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/viewParent"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="10dp"
+                        android:onClick="onForgotPasswordClick"
+                        android:text="Forgot Password?"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/newsMoreTextSize" />
+
+                    <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
+                        android:id="@+id/btnLogin"
+                        style="@style/loginButton2"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/loginViewsMargin"
+                        android:text="Login"
+                        app:initialCornerAngle="27dp"
+                        app:spinning_bar_color="@color/colorAccent"
+                        app:spinning_bar_padding="6dp"
+                        app:spinning_bar_width="4dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:weightSum="12">
+                        <!--                        <View-->
+                        <!--                            android:layout_width="0dp"-->
+                        <!--                            android:layout_height="1dp"-->
+                        <!--                            android:layout_weight="3"-->
+                        <!--                            android:background="@android:color/white" />-->
+
+                        <TextView
+                            style="@style/viewParent.headerText.NoMode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="center_horizontal"
+                            android:onClick="onLoginClick"
+                            android:text="@string/don_t_have_an_account_sign_up"
+                            android:textAlignment="center"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp" />
+                        <!--                        <View-->
+                        <!--                            android:layout_width="0dp"-->
+                        <!--                            android:layout_height="1dp"-->
+                        <!--                            android:layout_weight="3"-->
+                        <!--                            android:background="@android:color/white" />-->
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/learn_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="20dp"
+                android:weightSum="12">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="Learn More About Us Here."
+                    android:textColor="@color/whiteTextColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/contact"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        >-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textColor="@color/whiteTextColor"-->
+<!--                android:textColorLink="@color/whiteTextColor"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:textSize="10sp"-->
+<!--                android:drawableTint="@color/whiteTextColor"-->
+<!--                android:drawableStart="@drawable/ic_phone_black_24dp"-->
+<!--                android:textIsSelectable="true"-->
+<!--                android:autoLink = "phone"-->
+<!--                android:text=" +254-735-888-000"/>-->
+<!--        </RelativeLayout>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_weight="1">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:textSize="10sp"-->
+<!--                android:textColorLink="@color/whiteTextColor"-->
+<!--                android:drawableTint="@color/whiteTextColor"-->
+<!--                android:drawableStart="@drawable/ic_email_black_24dp"-->
+<!--                android:textIsSelectable="true"-->
+<!--                android:autoLink = "email"-->
+<!--                android:text=" info@agroirrigation.com"/>-->
+<!--        </RelativeLayout>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:gravity="right"-->
+<!--            android:layout_weight="1">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center_vertical"-->
+<!--                android:textSize="10sp"-->
+<!--                android:textColorLink="@color/whiteTextColor"-->
+<!--                android:drawableTint="@color/whiteTextColor"-->
+<!--                android:drawableStart="@drawable/ic_globe"-->
+<!--                android:textIsSelectable="true"-->
+<!--                android:autoLink = "web"-->
+<!--                android:text=" www.agroirrigation.com"/>-->
+<!--        </RelativeLayout>-->
+<!--    </LinearLayout>-->
+<!--    <View-->
+<!--        android:layout_width="11dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:background="@drawable/ic_side_bg" />-->
+<!--    <ImageView-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginRight="11dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:onClick="onLoginClick"-->
+<!--        android:src="@drawable/ic_add_img" />-->
+</RelativeLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.ProductDetailsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_scrollFlags="exitUntilCollapsed|scroll"
+        app:contentScrim="@color/colorAccent"
+        >
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingtoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll"
+            app:contentScrim="@color/colorAccent"
+            app:title="Product Details"
+            app:expandedTitleMarginStart="10dp"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_product"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/colorPrimary"
+                android:background="@color/colorAccent"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginBottom="?attr/actionBarSize"
+                app:cardUseCompatPadding="true"
+                android:layout_marginTop="?attr/actionBarSize"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="3dp"
+                app:cardBackgroundColor="@color/cardview_light_background"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                >
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+
+                    >
+                    <ImageView
+                        android:id="@+id/prod_image"
+                        android:src="@drawable/welcome_midland"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white"
+                        />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="2dp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="10dp"
+            app:cardCornerRadius="3dp"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/details"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="right"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="5dp"
+                        >
+                        <TextView
+                            android:textSize="20dp"
+                            android:padding="10dp"
+                            android:id="@+id/prod_name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:text="32 GB Samsung Flash Disc"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            />
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/prod_price"
+                                android:visibility="gone"
+                                android:padding="5dp"
+                                android:textColor="@color/colorRed"
+                                android:textSize="15dp"
+                                android:fontFamily="@font/open_sans_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/strike_through"
+                                android:text="Ksh 33000"
+                                android:textAlignment="center"
+
+                                />
+                            <TextView
+                                android:id="@+id/new_price"
+                                android:padding="5dp"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="15dp"
+                                android:fontFamily="@font/open_sans_bold"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ksh 33000"
+                                android:textAlignment="center"
+
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/prod_status"
+                        android:textSize="18dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="[Out of Stock]"
+                        android:textColor="@color/colorRed"
+                        android:textAlignment="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/open_sans_semibold"
+                        android:text="Description"
+                        android:textColor="@android:color/background_dark"
+                        />
+                    <TextView
+                        android:id="@+id/prod_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/open_sans_light"
+                        android:lineSpacingExtra="2dp"
+                        android:text="A moisturizing body with a sweet and refreshing aroma of Japanese cherry blossom, peony, musk, and strawberry. Will make the skin feel moist and smooth."
+                        android:textColor="@android:color/background_dark"
+                        />
+                    <LinearLayout
+                        android:id="@+id/available_stock"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@android:color/background_dark"
+                            android:fontFamily="@font/work_sans_bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="Available Stock:"/>
+                        <TextView
+                            android:textColor="@android:color/background_dark"
+                            android:id="@+id/stock_qty"
+                            android:fontFamily="@font/work_sans_bold"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="10 Units"
+                            />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:fontFamily="@font/work_sans_bold"
+                            android:gravity="center"
+                            android:text="Select Quantity"
+                            android:textColor="@android:color/background_dark"
+                            android:textSize="14sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:orientation="horizontal"
+                            android:gravity="right"
+                            android:layout_marginEnd="10dp"
+                            >
+
+                            <ImageView
+                                android:id="@+id/decreaseQuantity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_minus" />
+
+                            <EditText
+                                android:id="@+id/qty"
+                                android:layout_width="50dp"
+                                android:layout_height="45dp"
+                                android:inputType="number"
+                                android:fontFamily="@font/open_sans_bold"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@android:color/background_dark"
+                                android:textSize="20sp"
+                                app:layout_constraintVertical_bias="0.0" />
+
+                            <ImageView
+                                android:id="@+id/increaseQty"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_plus" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_gravity="center">
+                        <Button
+                            android:id="@+id/add_to_cart_btn"
+                            style="@style/loginButton"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:textAllCaps="false"
+                            android:layout_height="50dp"
+                            android:text="Add to Cart"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

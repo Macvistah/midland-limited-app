@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@color/cardview_light_background">
+
+    <TextView
+        android:id="@+id/close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:drawableStart="@drawable/ic_cancel_black_24dp"
+        android:drawableTint="@color/colorGreen" />
+
+    <LinearLayout
+        android:layout_below="@+id/close"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+
+        android:paddingBottom="0dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="Payment"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:textSize="16dp"/>
+        <LinearLayout
+            android:background="@color/colorGreen"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text=" Total Amount (Ksh)"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:textIsSelectable="true"
+                android:textSize="16dp"
+                android:id="@+id/amount"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 "
+                android:gravity="right"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:text="Guidelines"/>
+        <TextView
+            android:id="@+id/steps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:text="@string/steps"
+            android:textColor="@android:color/black"
+            android:padding="0dp"
+            />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/parent"
+            app:boxBackgroundMode="outline"
+            android:layout_marginBottom="20dp"
+            android:textColorHint="@color/colorAccent"
+            android:layout_marginTop="15dp">
+            <EditText
+                android:id="@+id/payment_code"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                style="@style/loginEditText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:ems="10"
+                android:maxLines="1"
+                android:hint="Transaction code"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/proceed"
+            style="@style/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="CHECKOUT"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item  android:id="@+id/opt_edit_cart" android:title="Edit"  android:icon="@drawable/ic_edit_black_24dp"/>
+    <item android:id="@+id/opt_delete_cart" android:title="Remove" android:icon="@drawable/ic_cancel_black_24dp"/>
+
+</menu>
